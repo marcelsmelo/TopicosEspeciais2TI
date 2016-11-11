@@ -4,17 +4,34 @@
 		<meta charset="utf-8">
 		<title>IMC</title>
 		<link rel="stylesheet" href="estilos.css" charset="utf-8" />
+		<style>
+			.erro{
+				border: 2px solid red;
+			}
+			.certo{
+				border: 2px solid green;
+			}
+		</style>
 	</head>
 	<body>
-		Nome: <input type="text" name="nome" id="nome"/> <br/>
-		Peso: <input type="number" name="peso" id="peso" /><br/>
-
-		<button type="button" name="button" id="button">Não clique aqui agora</button>
+		<form name="dados" onsubmit="return validar()">
+			Nome: <input type="text" name="nome" onblur="validaNome()"/> <br/>
+			Peso: <input type="number" name="peso" id="peso"/><br/>
+			Altura: <input type="number" name="altura" id="altura"/> <br/>
+			Idade: <input type="number" name="idade" id="idade" min='16' max='150'/><br/>
+			Data de Nascimento: <input type="date" name="dtNasc" id="dtNasc"/> <br/>
+			<input type="submit"/>
+		</form>
 
 		<h1 id="resultado"> </h1>
 
-		<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-		<script src="scriptJquery.js" charset="utf-8"></script>
+		<h2 id="exibeNome"></h2>
+		<h2 id="exibePeso"> </h2>
+		<h2 id="exibeAltura"> </h2>
+		<h2 id="exibeIdade"> </h2>
+		<h2 id="exibeDtNasc"> </h2>
+
+		<script src="scripts.js" charset="utf-8"></script>
 
 	</body>
 </html>
