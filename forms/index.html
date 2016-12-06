@@ -15,11 +15,33 @@
 	<body>
 		<form name="dados" method="post" onsubmit="return validar()">
 			<label>Nome:</label><br />
-			<input type="text" name="nome" onblur="validaNome()" required/><br />
+			<input type="text" name="nome" onblur="validaNome()" /><br />
 			<label>CPF:</label><br />
-			<input type="text" name="cpf" onblur="validaCPF()" required/><br />
+			<input type="text" name="cpf" onblur="validaCPF()" /><br />
 			<label>Idade:</label><br />
-			<input type="number" name="idade" onblur="validaIdade()" required/><br />
+			<input type="number" name="idade" onblur="validaIdade()" /><br />
+			<br />
+			<label>País:</label><br />
+			<select name="paises" onchange="validaPais()">
+				<option value="">Selecione um país</option>
+				<option value="BR">Brasil</option>
+				<option value="Esp">Espanha</option>
+				<option value="Pt">Portugal</option>
+			</select><br /><br />
+			<div class="sexo">
+				<label>Sexo:</label><br />
+				 <input type="radio" name="sexo" value="M" /> Masculino<br />
+				 <input type="radio" name="sexo" value="F" />Feminino
+			</div>
+
+			<br />
+			<div class="idioma">
+				<label>Idiomas:</label><br />
+				<input type="checkbox" name="idioma" value="PT-BR"> Português HEUHEUBR <br />
+				<input type="checkbox" name="idioma" value="EN"> Inglês <br />
+				<input type="checkbox" name="idioma" value="PT"> Português Poorrrtugal <br />
+				<input type="checkbox" name="idioma" value="ES"> Espanhol <br />
+			</div>
 			<br />
 			<input type="submit" name="button" value="Enviar Dados">
 		</form>
